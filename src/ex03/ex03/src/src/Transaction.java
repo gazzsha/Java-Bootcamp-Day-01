@@ -1,3 +1,4 @@
+package src;
 
 import java.util.UUID;
 
@@ -78,7 +79,7 @@ public class Transaction {
 
     @Override
     public String toString() {
-        return "Id: " + id.toString() + "\n" + Recipient.toString() + Sender.toString() + "Type Transfer: " + typeTransfer.toString() + "\n" + "Sum transfer: " + sumTransfer + "\n";
+        return "\nId: " + id.toString() + "\n" + Recipient.toString() + "\n" + Sender.toString() + "\nType Transfer: " + typeTransfer.toString() + "\n" + "Sum transfer: " + sumTransfer;
     }
 
 }

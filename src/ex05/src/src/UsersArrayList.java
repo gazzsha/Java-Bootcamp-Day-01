@@ -1,4 +1,7 @@
+package src;
+
 import java.util.Arrays;
+import java.util.UUID;
 
 public class UsersArrayList implements UserList {
     private User[] arrayUser;
@@ -35,7 +38,7 @@ public class UsersArrayList implements UserList {
         for (int i = 0; i != size; i++) {
             if (arrayUser[i].getId() == id) return arrayUser[i];
         }
-        throw new UserNotFoundException("Oops! User not found!");
+        throw new UserNotFoundException("Oops! User is not found!");
     }
 
     @Override
@@ -56,5 +59,6 @@ public class UsersArrayList implements UserList {
                 ", size=" + size +
                 '}';
     }
+
 
 }

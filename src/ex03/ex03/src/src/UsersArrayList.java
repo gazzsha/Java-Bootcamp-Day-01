@@ -1,3 +1,5 @@
+package src;
+
 import java.util.Arrays;
 
 public class UsersArrayList implements UserList {
@@ -35,7 +37,7 @@ public class UsersArrayList implements UserList {
         for (int i = 0; i != size; i++) {
             if (arrayUser[i].getId() == id) return arrayUser[i];
         }
-        throw new UserNotFoundException("Oops! User not found!");
+        throw new UserNotFoundException("Oops! User is not found!");
     }
 
     @Override

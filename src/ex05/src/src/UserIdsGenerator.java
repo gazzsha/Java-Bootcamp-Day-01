@@ -1,3 +1,5 @@
+package src;
+
 public class UserIdsGenerator {
     private int generateId = 0;
     private static UserIdsGenerator instance = null;

@@ -25,7 +25,17 @@ public class Programm {
         usersArrayList.addUser(user10);
         usersArrayList.addUser(user11);
         usersArrayList.addUser(user12);
-        System.out.println(usersArrayList.getUserById(100));
+        System.out.println(usersArrayList.toString());
+        // System.out.println(usersArrayList.getUserById(100));
+        // System.out.println(usersArrayList.getUserByIndex(100));
+        System.out.println(usersArrayList.getUserById(1));
+        System.out.println(usersArrayList.getUserById(2));
+        System.out.println(usersArrayList.getUserById(11));
+        System.out.println(usersArrayList.getUserByIndex(0));
+        System.out.println(usersArrayList.getUserByIndex(2));
+        System.out.println(usersArrayList.getUserByIndex(11));
+
+
 
 
     }
