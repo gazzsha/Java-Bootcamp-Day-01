@@ -116,7 +116,7 @@ public class Menu {
             System.out.println("Try again?\n 1. YES \n 2. NO,GO TO MENU");
             int value = in.nextInt();
             if (value == 1) {
-                executeTransfer();
+                executeTransferCatch();
             }
         }
     }
@@ -147,7 +147,7 @@ public class Menu {
             System.out.println("Try again?\n 1. YES \n 2. NO,GO TO MENU");
             int value = in.nextInt();
             if (value == 1) {
-                viewAllTransactionsByUser();
+                viewAllTransactionsByUserCatch();
             }
         }
     }
@@ -171,13 +171,13 @@ public class Menu {
     private void removeTransferCatch() {
         try {
             removeTransfer();
-        } catch (InputMismatchException | UserNotFoundException | TransactionNotFoundException exception) {
-            if (exception instanceof InputMismatchException) in.nextLine();
+        } catch (InputMismatchException | IllegalArgumentException | UserNotFoundException | TransactionNotFoundException exception) {
+            if (exception instanceof InputMismatchException || exception instanceof IllegalArgumentException) in.nextLine();
             System.out.println(exception.toString());
             System.out.println("Try again?\n 1. YES \n 2. NO,GO TO MENU");
             int value = in.nextInt();
             if (value == 1) {
-                removeTransfer();
+                removeTransferCatch();
             }
         }
     }
